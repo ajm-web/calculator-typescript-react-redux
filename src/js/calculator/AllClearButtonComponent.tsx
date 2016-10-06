@@ -3,7 +3,8 @@ import * as OperationStore from './OperationStore';
 import * as NumberInputState from './NumberInputStateStore';
 import * as NumberInputStore from './NumberInputStore';
 import * as LeftOperandStore from './LeftOperandStore';
-import * as RightOperandStore from './RightOperandStore'
+import * as RightOperandStore from './RightOperandStore';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class AllClearButton extends React.Component<{}, {}> {
 
@@ -29,6 +30,6 @@ export default class AllClearButton extends React.Component<{}, {}> {
     }
 
     render() {
-        return <button onClick={this.clicked.bind(this)}>AC</button>
+      return <RaisedButton label={"AC"} secondary={true} onClick={this.clicked.bind(this)}/>;
     }
 }

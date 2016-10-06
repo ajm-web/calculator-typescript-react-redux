@@ -3,6 +3,7 @@ import * as NumberInputStateStore from './NumberInputStateStore';
 import * as LeftOperandStore from './LeftOperandStore';
 import * as RightOperandStore from './RightOperandStore';
 import * as NumberInputStore from './NumberInputStore';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export interface NumberInputState {
   target: NumberInputStateStore.NumberInputState
@@ -51,6 +52,6 @@ export default class PeriodButton extends React.Component<{}, NumberInputState> 
   }
 
   render() {
-    return <button onClick={this.clicked.bind(this)}>.</button>
+    return <RaisedButton label={"."} onClick={this.clicked.bind(this)}/>
   }
 }

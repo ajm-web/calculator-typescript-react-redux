@@ -3,6 +3,7 @@ import * as NumberInputStateStore from './NumberInputStateStore';
 import * as LeftOperandStore from './LeftOperandStore';
 import * as RightOperandStore from './RightOperandStore';
 import * as NumberInputStore from './NumberInputStore';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export class InputNumberError implements Error {
     name: string = 'InputNumberError';
@@ -60,6 +61,6 @@ export default class NumericButton extends React.Component<NumberInputProps, Num
   }
 
   render() {
-    return <button onClick={this.clicked.bind(this)}>{this.props.value}</button>
+    return <RaisedButton label={this.props.value + ''} fullWidth={true} onClick={this.clicked.bind(this)}/>
   }
 }

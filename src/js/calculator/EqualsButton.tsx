@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as CalculationStore from './CalculationStore';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class EqualsButton extends React.Component<{}, {}> {
 
@@ -8,6 +9,6 @@ export default class EqualsButton extends React.Component<{}, {}> {
     }
 
     render() {
-        return <button onClick={this.clicked.bind(this)}>=</button>
+        return <RaisedButton label={"="} primary={true} onClick={this.clicked.bind(this)}/>
     }
 }

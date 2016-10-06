@@ -4,6 +4,7 @@ import * as NumberInputState from './NumberInputStateStore';
 import * as NumberInputStore from './NumberInputStore';
 import * as RightOperandStore from './RightOperandStore';
 import * as OperationStore from './OperationStore';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export class OperationButtonProps {
     operation: Operation
@@ -33,8 +34,8 @@ export default class OperationButton extends React.Component<OperationButtonProp
     }
 
     render() {
-        return <button onClick={this.clicked.bind(this)}>
-            {this.props.operation.operator}
-        </button>
+      return (
+        <RaisedButton label={this.props.operation.operator} onClick={this.clicked.bind(this)}/>
+      );
     }
 }
