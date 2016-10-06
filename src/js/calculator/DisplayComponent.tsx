@@ -2,6 +2,7 @@ import * as React from 'react';
 import {sprintf} from 'sprintf';
 import * as LeftOperandStore from './LeftOperandStore';
 import * as RightOperandStore from './RightOperandStore';
+import TextField from 'material-ui/TextField';
 
 export interface DisplayState {
   result: number
@@ -37,10 +38,14 @@ export class Display extends React.Component<{}, DisplayState> {
     if(this.state.error) {
       return this.state.error;
     } else {
-      return sprintf('%f', this.state.result);
+      //return sprintf('%f', this.state.result);
+      return this.state.result.toLocaleString();
     }
   }
   render() {
-    return <div><p>{this.formatted}</p></div>
+    const style = {
+      textAlign: 'right'
+    };
+    return <div><TextField disabled={true} inputStyle={style} fullWidth={true} value={this.formatted}/></div>
   }
 }
