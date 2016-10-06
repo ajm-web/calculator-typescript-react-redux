@@ -52,6 +52,6 @@ export default class PeriodButton extends React.Component<{}, NumberInputState> 
   }
 
   render() {
-    return <RaisedButton label={"."} onClick={this.clicked.bind(this)}/>
+    return <RaisedButton label={"."} fullWidth={true} onClick={this.clicked.bind(this)}/>
   }
 }

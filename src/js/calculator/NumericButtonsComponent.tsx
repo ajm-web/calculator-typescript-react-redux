@@ -13,7 +13,8 @@ export default class NumericButtons extends React.Component<{}, {}> {
   }
 
   wrapWithli(elem:any, i:number) {
-    return <GridTile key={i}>{elem}</GridTile>
+    const width = i == 9 ? 2 : 1;
+    return <GridTile cols={width} key={i}>{elem}</GridTile>
   }
 
   render() {

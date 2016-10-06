@@ -6,6 +6,7 @@ import EqualsButton from "./EqualsButton";
 import AllClearButton from "./AllClearButtonComponent";
 import './calculator.scss';
 import AppBar from 'material-ui/AppBar';
+import {GridList, GridTile} from 'material-ui/GridList';
 
 export default class Calculator extends React.Component<{}, {}> {
     render(){
@@ -14,8 +15,10 @@ export default class Calculator extends React.Component<{}, {}> {
               <AppBar title="Calculator"/>
               <div>
                 <Display/>
-                <NumericButtons/>
-                <OperationButtons/>
+                <GridList cols={4}>
+                  <GridTile cols={3}><NumericButtons/></GridTile>
+                  <GridTile cols={1}><OperationButtons/></GridTile>
+                </GridList>
                 <EqualsButton/>
                 <AllClearButton/>
               </div>

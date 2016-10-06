@@ -46,6 +46,6 @@ export class Display extends React.Component<{}, DisplayState> {
     const style = {
       textAlign: 'right'
     };
-    return <div><TextField disabled={true} inputStyle={style} fullWidth={true} value={this.formatted}/></div>
+    return <div><TextField id="display-text-field" disabled={true} inputStyle={style} fullWidth={true} value={this.formatted}/></div>
   }
 }
