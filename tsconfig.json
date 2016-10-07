@@ -12,30 +12,7 @@
         "./src/**/*.tsx",
         "./src/**/*.ts"
     ],
-    "files": [
-        "./typings/index.d.ts",
-        "./src/js/calculator/AllClearButtonComponent.tsx",
-        "./src/js/calculator/CalculatorComponent.tsx",
-        "./src/js/calculator/DisplayComponent.tsx",
-        "./src/js/calculator/EqualsButton.tsx",
-        "./src/js/calculator/NumericButtonComponent.tsx",
-        "./src/js/calculator/NumericButtonsComponent.tsx",
-        "./src/js/calculator/OperationButtonComponent.tsx",
-        "./src/js/calculator/OperationButtonsComponent.tsx",
-        "./src/js/calculator/PeriodButtonComponent.tsx",
-        "./src/js/hello.component.tsx",
-        "./src/js/index.tsx",
-        "./src/js/calculator/CalculationStore.ts",
-        "./src/js/calculator/LeftOperandStore.ts",
-        "./src/js/calculator/NumberInputStateStore.ts",
-        "./src/js/calculator/NumberInputStore.ts",
-        "./src/js/calculator/opeartions.ts",
-        "./src/js/calculator/OperationStore.ts",
-        "./src/js/calculator/RightOperandStore.ts",
-        "./src/js/calculator/UnaryOperationButton.ts",
-        "./src/js/calculator/UnaryOperations.ts"
-    ],
     "atom": {
-        "rewriteTsconfig": true
+        "rewriteTsconfig": false
     }
 }
