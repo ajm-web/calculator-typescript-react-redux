@@ -1,23 +1,23 @@
-import * as React from 'react';
-import * as NumberInputStateStore from './NumberInputStateStore';
-import * as LeftOperandStore from './LeftOperandStore';
-import * as RightOperandStore from './RightOperandStore';
-import * as NumberInputStore from './NumberInputStore';
-import RaisedButton from 'material-ui/RaisedButton';
+import * as React from "react";
+import * as NumberInputStateStore from "./NumberInputStateStore";
+import * as LeftOperandStore from "./LeftOperandStore";
+import * as RightOperandStore from "./RightOperandStore";
+import * as NumberInputStore from "./NumberInputStore";
+import RaisedButton from "material-ui/RaisedButton";
 
 export interface NumberInputState {
-  target: NumberInputStateStore.NumberInputState
+  target: NumberInputStateStore.NumberInputState;
 }
 
 export class NumberInputProps {
     value: number;
 
-    constructor(number: number) {
-        this.value = number;
+    constructor(n: number) {
+        this.value = n;
     }
 
-    static of: (number: number) => NumberInputProps = (number) => {
-        return new NumberInputProps(number);
+    static of: (n: number) => NumberInputProps = (n) => {
+        return new NumberInputProps(n);
     }
 }
 
@@ -31,7 +31,7 @@ export default class PeriodButton extends React.Component<{}, NumberInputState> 
       this.setState({
         target: state
       });
-    })
+    });
   }
 
   state: NumberInputState = {
@@ -40,9 +40,9 @@ export default class PeriodButton extends React.Component<{}, NumberInputState> 
 
 
   get targetOperand() {
-    return this.state.target == NumberInputStateStore.NumberInputState.Left
+    return this.state.target === NumberInputStateStore.NumberInputState.Left
       ? LeftOperandStore.instance
-      : RightOperandStore.instance
+      : RightOperandStore.instance;
   }
 
 
@@ -52,6 +52,6 @@ export default class PeriodButton extends React.Component<{}, NumberInputState> 
   }
 
   render() {
-    return <RaisedButton label={"."} fullWidth={true} onClick={this.clicked.bind(this)}/>
+    return <RaisedButton label={"."} fullWidth={true} onClick={this.clicked.bind(this)}/>;
   }
 }

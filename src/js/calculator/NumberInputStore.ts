@@ -1,11 +1,11 @@
-import {createStore, applyMiddleware, Action} from 'redux';
-import thunk from 'redux-thunk';
+import {createStore, applyMiddleware, Action} from "redux";
+import thunk from "redux-thunk";
 
 export const InputActionType = {
-  Append : 'INPUT_ACTION_APPEND',
-  Set:  'INPUT_ACTION_SET',
-  AsFloat: 'INPUT_ACTION_AS_FLOAT',
-  Reset : 'INPUT_ACTION_RESET'
+  Append : "INPUT_ACTION_APPEND",
+  Set:  "INPUT_ACTION_SET",
+  AsFloat: "INPUT_ACTION_AS_FLOAT",
+  Reset : "INPUT_ACTION_RESET"
 };
 
 export interface InputAction extends Action {
@@ -25,10 +25,10 @@ export class InputNumber {
     this.value = value;
   }
 
-  append(n: number){
+  append(n: number) {
     console.log("current,", this.type, this.value);
     let value: number;
-    let type : NumberType;
+    let type: NumberType;
     switch (this.type) {
       case NumberType.Int:
         type = NumberType.Int;
@@ -48,7 +48,7 @@ export class InputNumber {
     return new InputNumber(type, this.value);
   }
 
-  static of(n:number) {
+  static of(n: number) {
     const isFloat = n.toString().indexOf(".") >= 0;
     console.log(n, "isFloat", isFloat);
     const type = isFloat ? NumberType.Float : NumberType.Int;
@@ -58,7 +58,7 @@ export class InputNumber {
 
 const initialState: InputNumber = InputNumber.of(0);
 
-console.log('initialState', initialState);
+console.log("initialState", initialState);
 
 export const numberInputReducer = (state: InputNumber = initialState, action: InputAction) => {
   switch (action.type) {

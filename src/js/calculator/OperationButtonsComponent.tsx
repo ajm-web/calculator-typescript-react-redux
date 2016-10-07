@@ -1,19 +1,21 @@
-import * as React from 'react';
-import {operations} from './opeartions';
-import OperationButton from './OperationButtonComponent';
-import {GridList, GridTile} from 'material-ui/GridList';
+import * as React from "react";
+import {operations} from "./opeartions";
+import OperationButton from "./OperationButtonComponent";
+import {GridList, GridTile} from "material-ui/GridList";
+import EqualsButton from "./EqualsButton";
 
 export default class OperationButtons extends React.Component<{}, {}> {
-    constructor(){
+    constructor() {
         super();
     }
 
     get buttons (){
-      return operations.map((op) => <OperationButton operation={op}/>)
+      const ops = operations.map((op) => <OperationButton operation={op}/>);
+      return [...ops, <EqualsButton/>];
     }
 
-    wrapWithli(elem:any, i:number) {
-      return <GridTile key={i}>{elem}</GridTile>
+    wrapWithli(elem: any, i: number) {
+      return <GridTile key={i}>{elem}</GridTile>;
     }
 
     render() {

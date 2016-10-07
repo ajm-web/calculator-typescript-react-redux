@@ -1,12 +1,12 @@
-import {createStore, Action} from 'redux';
-import * as NumberInputStateStore from './NumberInputStateStore';
-import * as NumberInputStore from './NumberInputStore';
-import * as OperationStore from './OperationStore';
-import * as LeftOperandStore from './LeftOperandStore';
-import * as RightOperandStore from './RightOperandStore';
+import {createStore, Action} from "redux";
+import * as NumberInputStateStore from "./NumberInputStateStore";
+import * as NumberInputStore from "./NumberInputStore";
+import * as OperationStore from "./OperationStore";
+import * as LeftOperandStore from "./LeftOperandStore";
+import * as RightOperandStore from "./RightOperandStore";
 
 export class ActionTypes {
-    static Execute = 'EXECUTE_CALC';
+    static Execute = "EXECUTE_CALC";
 }
 
 const execute = () => {

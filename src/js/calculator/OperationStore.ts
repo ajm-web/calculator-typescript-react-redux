@@ -1,18 +1,18 @@
-import {createStore, applyMiddleware, Action} from 'redux';
-import thunk from 'redux-thunk';
-import {Operation} from './opeartions';
+import {createStore, applyMiddleware, Action} from "redux";
+import thunk from "redux-thunk";
+import {Operation} from "./opeartions";
 
 export const ActionTypes = {
-    'SET': 'SET_OPERATION',
-    'UNSET': 'UNSET_OPERATION'
+    "SET": "SET_OPERATION",
+    "UNSET": "UNSET_OPERATION"
 };
 
 export interface OperationAction extends Action {
-    type: string
+    type: string;
 }
 
 export interface SetOperationAction extends OperationAction {
-    operation: Operation
+    operation: Operation;
 }
 
 export interface UnsetOperationAction extends OperationAction {

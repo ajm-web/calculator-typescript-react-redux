@@ -31,7 +31,9 @@
         "./src/js/calculator/NumberInputStore.ts",
         "./src/js/calculator/opeartions.ts",
         "./src/js/calculator/OperationStore.ts",
-        "./src/js/calculator/RightOperandStore.ts"
+        "./src/js/calculator/RightOperandStore.ts",
+        "./src/js/calculator/UnaryOperationButton.ts",
+        "./src/js/calculator/UnaryOperations.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

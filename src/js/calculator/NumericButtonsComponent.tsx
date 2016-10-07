@@ -1,8 +1,8 @@
-import * as React from 'react';
-import {range} from 'lodash';
-import NumericButton from './NumericButtonComponent';
+import * as React from "react";
+import {range} from "lodash";
+import NumericButton from "./NumericButtonComponent";
 import PeriodButton from "./PeriodButtonComponent";
-import {GridList, GridTile} from 'material-ui/GridList';
+import {GridList, GridTile} from "material-ui/GridList";
 
 export default class NumericButtons extends React.Component<{}, {}> {
 
@@ -12,9 +12,9 @@ export default class NumericButtons extends React.Component<{}, {}> {
     });
   }
 
-  wrapWithli(elem:any, i:number) {
-    const width = i == 9 ? 2 : 1;
-    return <GridTile cols={width} key={i}>{elem}</GridTile>
+  wrapWithli(elem: any, i: number) {
+    const width = i === 9 ? 2 : 1;
+    return <GridTile cols={width} key={i}>{elem}</GridTile>;
   }
 
   render() {

@@ -1,23 +1,23 @@
-import * as React from 'react';
-import {Operation} from './opeartions';
-import * as NumberInputState from './NumberInputStateStore';
-import * as NumberInputStore from './NumberInputStore';
-import * as RightOperandStore from './RightOperandStore';
-import * as OperationStore from './OperationStore';
-import RaisedButton from 'material-ui/RaisedButton';
+import * as React from "react";
+import {Operation} from "./opeartions";
+import * as NumberInputState from "./NumberInputStateStore";
+import * as NumberInputStore from "./NumberInputStore";
+import * as RightOperandStore from "./RightOperandStore";
+import * as OperationStore from "./OperationStore";
+import RaisedButton from "material-ui/RaisedButton";
 
 export class OperationButtonProps {
-    operation: Operation
+    operation: Operation;
 }
 
 export default class OperationButton extends React.Component<OperationButtonProps, {}> {
 
-    constructor(){
+    constructor() {
         super();
     }
 
     clicked() {
-        console.log('clicked :' + this.props.operation.name);
+        console.log("clicked :" + this.props.operation.name);
 
         NumberInputState.instance.dispatch({
             type: NumberInputState.ActionType.TO_RIGHT
