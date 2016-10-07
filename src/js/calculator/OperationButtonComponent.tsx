@@ -35,7 +35,7 @@ export default class OperationButton extends React.Component<OperationButtonProp
 
     render() {
       return (
-        <RaisedButton label={this.props.operation.operator} onClick={this.clicked.bind(this)}/>
+        <RaisedButton backgroundColor="#a4c639" fullWidth={true} label={this.props.operation.operator} onClick={this.clicked.bind(this)}/>
       );
     }
 }
